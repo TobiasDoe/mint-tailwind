@@ -22,7 +22,7 @@
 		"webpack-mix": "^3.0.0"
 	},
 	"dependencies": {
-		"@fortawesome/fontawesome-pro": "^5.14.0",
+		"tailwindcss": "^2.0.4",
 		"vue": "^3.0.7"
 	}
 }
