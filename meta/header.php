@@ -13,5 +13,4 @@
 
 	</head>
 
-	<body>
-		<div class="main-content container-fluid p-0">
+	<body class="bg-gray-800 text-gray-100 m-0 p-0">

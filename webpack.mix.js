@@ -1,5 +1,8 @@
 let mix = require('webpack-mix');
 
+// Tailwindcss
+const tailwindcss = require('tailwindcss');
+
 /*
  |--------------------------------------------------------------------------
  | Mix Asset Management
@@ -11,11 +14,27 @@ let mix = require('webpack-mix');
  |
  */
 
+if (mix.inProduction()) {
+	mix.options({
+		terser: {
+			terserOptions: {
+				compress: {
+					drop_console: true
+				}
+			}
+		}
+	});
+}
+
 mix
 	.setPublicPath('./')
 	.js('resources/js/script.js', 'js/')
 	.sass('resources/scss/styles.scss', 'css/')
-	// .extract(["bootstrap", "jquery", "@fortawesome/fontawesome-pro"])
+	.options({
+		processCssUrls: true,
+		postCss: [ tailwindcss('./tailwind.config.js') ],
+	})
+	// .extract(["tailwind"])
 	.sourceMaps(true, 'source-map')
 	.version();
 

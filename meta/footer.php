@@ -1,5 +1,4 @@
 		<!-- Close main-content -->
-		</div>
 		<div class="scripts_styles">
 			<?php require('mix.php'); ?>
 			<!-- Styles -->

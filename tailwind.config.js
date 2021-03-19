@@ -1,11 +1,9 @@
 module.exports = {
-	purge: {
-		enabled: true,
-		content: [
-			'./sites/**/*.html',
-			'./resources/js/**/*.vue'
-		]
-	},
+	purge: [
+		'./sites/**/*.html',
+		'./meta/**/*.html',
+		'./resources/js/**/*.vue'
+	],
 	darkMode: false, // or 'media' or 'class'
 	theme: {
 		extend: {
