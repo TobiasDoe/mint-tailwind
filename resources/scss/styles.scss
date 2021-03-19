@@ -1,0 +1,38 @@
+// App Scss
+$grid-breakpoints: (
+	xs: 0,
+	sm: 576px,
+	md: 768px,
+	lg: 992px,
+	xl: 1200px,
+	xxl: 1400px
+);
+
+$primary:       #3DB441;
+$secondary:     #B84228;
+
+$main_brand: #5D5D5D;
+$main_brand_bg: #c1c3c5;
+$sub_brand: #523800;
+
+// Bootstrap
+@import "~bootstrap/scss/bootstrap";
+
+// Fontawesome
+@import "~@fortawesome/fontawesome-pro/scss/fontawesome.scss";
+@import "~@fortawesome/fontawesome-pro/scss/regular.scss";
+@import "~@fortawesome/fontawesome-pro/scss/solid.scss";
+@import "~@fortawesome/fontawesome-pro/scss/brands.scss";
+@import "~@fortawesome/fontawesome-pro/scss/duotone.scss";
+@import "~@fortawesome/fontawesome-pro/scss/light.scss";
+
+
+// Custom Styles
+@import "base-styles";
+
+// layouts
+@import "layout/header_wrapper";
+@import "layout/footer_wrapper";
+
+// modules
+@import "layout/modules/main_grid";
