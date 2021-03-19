@@ -1,2 +1,2 @@
 # mint
-## webpack starter kit with bootstrap & router
+## webpack starter kit with tailwindcss & vue3

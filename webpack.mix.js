@@ -1,4 +1,4 @@
-let mix = require('webpack-mix');
+const mix = require('laravel-mix');
 
 // Tailwindcss
 const tailwindcss = require('tailwindcss');
@@ -28,13 +28,13 @@ if (mix.inProduction()) {
 
 mix
 	.setPublicPath('./')
-	.js('resources/js/script.js', 'js/')
+	.js('resources/js/script.js', 'js/').vue()
 	.sass('resources/scss/styles.scss', 'css/')
 	.options({
 		processCssUrls: true,
 		postCss: [ tailwindcss('./tailwind.config.js') ],
 	})
-	// .extract(["tailwind"])
+	.extract(["Vue", "tailwindcss"])
 	.sourceMaps(true, 'source-map')
 	.version();
 
