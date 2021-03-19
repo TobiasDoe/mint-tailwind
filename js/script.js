@@ -49,5 +49,5 @@ module.exports = __webpack_require__(/*! /Users/tobias/Developer/gitlab/mint-tai
 
 /***/ })
 
-},[[0,"/js/manifest","/js/vendor"]]]);
+},[[0,"/js/manifest"]]]);
 //# sourceMappingURL=script.js.map
