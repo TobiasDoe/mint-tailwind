@@ -1,4 +1,7 @@
-@import url(https://fonts.googleapis.com/css?family=Noto+Sans&display=swap);html,
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans&display=swap);@tailwind base;
+@tailwind components;
+@tailwind utilities;
+html,
 body {
   position: relative;
   max-width: 100vw;
