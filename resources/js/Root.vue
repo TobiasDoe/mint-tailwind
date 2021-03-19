@@ -72,7 +72,7 @@ export default {
 
 		@supports (backdrop-filter: blur(5px)) {
 			background-color: transparent;
-			backdrop-filter: blur(5px) brightness(50%);
+			backdrop-filter: blur(10px) brightness(90%);
 		}
 	}
 	.text-shadow {
