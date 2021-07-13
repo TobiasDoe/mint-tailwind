@@ -35,7 +35,7 @@
             );
         }
         return file_exists($publicPath . ($manifestDirectory.'/hot'))
-                    ? "http://localhost:8080{$manifest[$path]}"
+                    ? str_replace('http://', 'https://', file_get_contents($publicPath . ($manifestDirectory.'/hot')))."{$manifest[$path]}"
                     : $manifestDirectory.$manifest[$path];
     }
 

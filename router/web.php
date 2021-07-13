@@ -5,6 +5,9 @@
 	$query = isset($_GET['q']) ? $_GET['q'] : $site;
 	// var_dump($query);
 
+	$server = $_SERVER['SERVER_NAME'];
+	$protocol = stripos($_SERVER['SERVER_PROTOCOL'],'2') ? 'https://' : 'http://';
+
 	$pageParams = [
 		'page' => 'sites/home.html',
 		'header' => 'meta/header.php',

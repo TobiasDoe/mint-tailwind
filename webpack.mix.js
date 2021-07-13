@@ -3,6 +3,12 @@ const mix = require('laravel-mix');
 // Tailwindcss
 const tailwindcss = require('tailwindcss');
 
+const fs = require("fs");
+const path = require("path");
+
+const homeDir = process.env.HOME;
+const host = process.env.APP_URL.split("//")[1];
+console.log("host", host);
 /*
  |--------------------------------------------------------------------------
  | Mix Asset Management
@@ -14,6 +20,40 @@ const tailwindcss = require('tailwindcss');
  |
  */
 
+ mix
+ 	.setPublicPath('./')
+ 	.js('resources/js/script.js', 'js/').vue()
+ 	.sass('resources/scss/styles.scss', 'css/')
+	.webpackConfig({
+		devServer: {
+			https: {
+				key: fs.readFileSync(
+					path.resolve(homeDir, `.config/valet/Certificates/${host}.key`)
+				),
+				cert: fs.readFileSync(
+					path.resolve(homeDir, `.config/valet/Certificates/${host}.crt`)
+				),
+			},
+		},
+		resolve: {
+			alias: {
+				'@': path.resolve('resources/sass')
+			}
+		}
+	})
+	.options({
+		postCss: [ tailwindcss('./tailwind.config.js') ],
+		processCssUrls: true,
+		hmrOptions: {
+			host: `${host}`,
+			https: true,
+			port: 8080
+		}
+	})
+	.extract(["Vue", "tailwindcss"])
+	.sourceMaps(true, 'source-map');
+	// .version();
+
 if (mix.inProduction()) {
 	mix.options({
 		terser: {
@@ -23,20 +63,8 @@ if (mix.inProduction()) {
 				}
 			}
 		}
-	});
+	}).version();
 }
-
-mix
-	.setPublicPath('./')
-	.js('resources/js/script.js', 'js/').vue()
-	.sass('resources/scss/styles.scss', 'css/')
-	.options({
-		processCssUrls: true,
-		postCss: [ tailwindcss('./tailwind.config.js') ],
-	})
-	.extract(["Vue", "tailwindcss"])
-	.sourceMaps(true, 'source-map')
-	.version();
 
 // Full API
 // mix.js(src, output);
