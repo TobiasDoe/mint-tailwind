@@ -30,6 +30,7 @@
 	"dependencies": {
 		"@fortawesome/fontawesome-pro": "^5.15.3",
 		"axios": "^0.21.1",
+		"moment": "^2.29.1",
 		"tailwindcss": "^2.1.1",
 		"vue": "^3.0.7"
 	}

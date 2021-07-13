@@ -1,7 +1,10 @@
 <template>
 	<!-- component -->
 		<div class="bg-image w-full min-h-screen flex flex-wrap justify-center items-center gap-3 py-5">
-			<h1 class="text-6xl w-full text-center text-blue-900">mint-tailwind</h1>
+			<div class="header w-full">
+				<h1 class="text-6xl text-center text-blue-900">mint-tailwind</h1>
+				<h2 class="text-lg text-center text-red-500">{{ fullDate }}</h2>
+			</div>
 			<div class="backdrop w-10/12 md:w-1/4 bg-white bg-opacity-10 rounded p-3 text-white border border-gray-300 shadow-lg">
 				<!-- header -->
 				<div class="w-full mb-3 pb-3 border-b border-1 border-white">
@@ -55,6 +58,27 @@
 
 <script>
 export default {
+	data() {
+		return {
+			currentdate: new Date()
+		}
+	},
+	methods: {
+		updateDate() {
+			this.currentdate = new Date();
+		}
+	},
+	computed: {
+		fullDate() {
+			return moment(this.currentdate).format("Do MMM YY - H:mm:ss")
+		}
+	},
+	created() {
+		let self = this;
+		setInterval(function () {
+			self.updateDate();
+		}, 1000);
+	}
 }
 </script>
 
