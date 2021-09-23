@@ -12,6 +12,10 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
 		<meta name="author" content="onmyown.at">
 
+		<?php require('mix.php'); ?>
+		<!-- Styles -->
+		<link rel="stylesheet" type="text/css" href="<?php echo mix('css/styles.css'); ?>">
+
 	</head>
 
 	<body class="bg-white text-gray-100 m-0 p-0">
