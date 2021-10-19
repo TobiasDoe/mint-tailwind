@@ -10,6 +10,7 @@ window.moment = moment;
 
 // import Vue
 import { createApp } from 'vue';
+import router from './router';
 // const Vue = require('vue');
 // window.Vue = Vue;
 
@@ -21,4 +22,4 @@ const App = createApp({
 	}
 });
 
-App.mount('#app');
+App.use(router).mount('#app');
