@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-// Fontawesome
+// **** Fontawesome ****
 @import "~@fortawesome/fontawesome-pro/scss/fontawesome.scss";
 @import "~@fortawesome/fontawesome-pro/scss/regular.scss";
 @import "~@fortawesome/fontawesome-pro/scss/solid.scss";
@@ -10,12 +10,15 @@
 @import "~@fortawesome/fontawesome-pro/scss/duotone.scss";
 @import "~@fortawesome/fontawesome-pro/scss/light.scss";
 
-// Base Styles
-@import "base-styles";
+// **** Base Styles ****
+@import "fonts";
+@layer base {
+	@import "base-styles";
+}
 
-// layouts
+// **** layouts ****
 @import "layout/header_wrapper";
 @import "layout/footer_wrapper";
 
-// modules
+// **** modules ****
 // @import "layout/modules/**";

@@ -53,6 +53,17 @@
 				</a>
 			</div>
 		</div>
+		<div class="font-test">
+			<p class="font-sans italic">The quick brown fox</p>
+			<p class="font-serif not-italic">The quick brown fox</p>
+			<p class="font-mono font-black">The quick brown fox</p>
+			<p class="font-sans italic">The quick brown fox</p>
+			<p class="font-serif not-italic">The quick brown fox</p>
+			<p class="font-mono font-thin">The quick brown fox</p>
+			<p class="font-sans font-semibold italic">The quick brown fox</p>
+			<p class="font-serif not-italic">The quick brown fox</p>
+			<p class="font-mono font-thin">The quick brown fox</p>
+		</div>
 	</div>
 </template>
 
