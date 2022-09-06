@@ -4,8 +4,13 @@ resources/*
 .gitignore
 
 .jshintrc
+README.md
+
 npm-debug.log
 package.json
 package-lock.json
-README.md
+
 webpack.mix.js
+tailwind.config.js
+
+.env.*
