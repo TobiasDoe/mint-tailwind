@@ -51,7 +51,7 @@ console.log("host", host);
 		}
 	})
 	.extract(["Vue", "tailwindcss"])
-	.sourceMaps(true, 'source-map');
+	.sourceMaps(false, 'source-map');
 	// .version();
 
 if (mix.inProduction()) {
